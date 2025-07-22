@@ -14,7 +14,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long fullName;
+    private String fullName;
     private String email;
     private String password;
     @JsonIgnore
