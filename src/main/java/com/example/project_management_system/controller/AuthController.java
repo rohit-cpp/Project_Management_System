@@ -47,10 +47,10 @@ public class AuthController {
 
     User savedUser = userRepository.save(createdUser);
 
+     subscriptionService.createSubscription(savedUser);
 
-     SubscriptionService.createSubscription(savedUser);
-
-      Authentication authentication= new UsernamePasswordAuthenticationToken(user.getEmail(),user.getPassword());
+      Authentication authentication= new UsernamePasswordAuthenticationToken
+              (user.getEmail(),user.getPassword());
        SecurityContextHolder.getContext().setAuthentication(authentication);
       String jwt = JwtProvider.generateToken(authentication);
 

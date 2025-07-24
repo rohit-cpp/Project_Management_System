@@ -12,5 +12,5 @@ public interface SubscriptionService {
 
     Subscription upgradeSubscription(Long userId, PlanType planType);
 
-    boolean isVaild(Subscription subscription);
+    boolean isValid(Subscription subscription);
 }

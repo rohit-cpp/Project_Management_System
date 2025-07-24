@@ -23,7 +23,7 @@ public class Subscription
 
    private PlanType planType;
 
-   private boolean isVaild;
+   private boolean isValid;
 
    @OneToOne
    private User user;
